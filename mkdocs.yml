@@ -1,0 +1,49 @@
+site_name: bibliography
+site_url: https://goessl.github.io/bibliography/
+site_author: Sebastian Gössl
+site_description: Physics bibliography.
+
+repo_name: goessl/bibliography
+repo_url: https://github.com/goessl/bibliography
+
+copyright: Copyright &copy; 2026 Sebastian Gössl
+
+theme:
+  name: material
+  features:
+    - navigation.footer
+  palette:
+    - media: "(prefers-color-scheme)"
+      toggle:
+        icon: material/brightness-auto
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to system preference
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/goessl/
+      name: goessl on Github
+    - icon: fontawesome/brands/instagram
+      link: https://instagram.com/lordgoessl/
+      name: lordgoessl on Instagram
+
+markdown_extensions:
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+nav:
+  - Home: index.md
+  - bibliography.md
