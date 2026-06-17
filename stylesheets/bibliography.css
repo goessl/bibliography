@@ -1,0 +1,63 @@
+/* make Tabulator elements look like Material table elements */
+
+.tabulator {
+    font-size: .64rem;
+    border: none;
+    border-top: .05rem solid var(--md-typeset-table-color);
+    border-radius: .1rem;
+    background-color: var(--md-default-bg-color);
+}
+
+/* th */
+.tabulator-col {
+    background-color: var(--md-default-fg-color--light) !important;
+    color: var(--md-default-bg-color) !important;
+    padding: .9375em 1.25em;
+    font-weight: 700;
+    border: none !important;
+    vertical-align: top;
+}
+
+.tabulator-col-title {
+    white-space: normal;
+}
+
+/* td */
+.tabulator-cell {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    padding: .9375em 1.25em;
+    border: none;
+    border-top: .05rem solid var(--md-typeset-table-color);
+    vertical-align: top;
+}
+
+/* odd row stripe (Material stripes odd rows) */
+.tabulator-row:nth-child(odd) .tabulator-cell {
+    background-color: var(--md-typeset-table-color);
+}
+
+/* filter inputs inside the header */
+.tabulator-header-filter input {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    border: .05rem solid var(--md-default-fg-color--lighter);
+    border-radius: .1rem;
+    font-size: inherit;
+    font-family: inherit;
+    width: 100%;
+    padding: .1em .3em;
+    margin-top: .3em;
+}
+
+/* list-filter popup */
+.tabulator-filter-list {
+    background-color: var(--md-default-bg-color);
+    color: var(--md-default-fg-color);
+    border: .05rem solid var(--md-default-fg-color--lighter);
+    font-size: inherit;
+}
+
+.tabulator-filter-list-item:hover {
+    background-color: var(--md-typeset-table-color);
+}
