@@ -41,16 +41,18 @@ extra:
       name: lordgoessl on Instagram
 
 markdown_extensions:
-  - tables
   - pymdownx.tasklist:
       custom_checkbox: true
 
 hooks:
   - hooks/build_data.py
 
+extra_css:
+  - https://unpkg.com/tabulator-tables/dist/css/tabulator.min.css
+
 extra_javascript:
-  - https://unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
-  - javascripts/tablesort.js
+  - https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js
+  - javascripts/bibliography.js
 
 nav:
   - Home: index.md
