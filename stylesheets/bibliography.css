@@ -22,6 +22,12 @@
     white-space: normal;
 }
 
+/* compact author list */
+.tabulator-cell ul {
+    margin: 0;
+    padding-left: 1em;
+}
+
 /* td */
 .tabulator-cell {
     background-color: var(--md-default-bg-color);
