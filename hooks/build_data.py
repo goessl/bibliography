@@ -5,15 +5,19 @@ import json
 
 
 ROOT = Path(__file__).resolve().parent.parent
-SOURCE = ROOT / "bibliography.yml"
-TARGET = ROOT / "docs" / "bibliography.json"
+SOURCE = ROOT / 'bibliography.yml'
+TARGET = ROOT / 'docs' / 'bibliography.json'
 
 BOOKLET_FIELDS = {'author', 'title'}
 BOOK_FIELDS = {'author', 'title', 'date', 'edition', 'publisher', 'isbn', 'doi', 'url'}
 
 
+def on_post_build(config, **kwargs):
+    (Path(config['site_dir']) / '.nojekyll').touch()
+
+
 def on_pre_build(config, **kwargs):
-    with open(SOURCE, "r", encoding="utf-8") as ifile, open(TARGET, "w", encoding="utf-8") as ofile:
+    with open(SOURCE, 'r', encoding='utf-8') as ifile, open(TARGET, 'w', encoding='utf-8') as ofile:
         #read
         data = yaml.safe_load(ifile)
         

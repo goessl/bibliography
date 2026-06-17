@@ -1,25 +1,63 @@
 # bibliography
 
 Physics bibliography.
-```python
->>> from bibliography import foo
->>> foo(2, 3)
-5
-```
-
-## Installation
-
-```console
-pip install git+https://github.com/goessl/bibliography.git
-```
 
 ## Usage
 
-**Enjoy the [documentation webpage](https://goessl.github.io/bibliography).**
+**Enjoy the [webpage](https://goessl.github.io/bibliography).**
+
+## Bibliography conventions
+
+- `.bib` reference: [Overleaf/BibLaTeX](https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex)
+- Bibliography file as YAML: [`bibliography.yml`](https://github.com/goessl/bibliography)
+    - Every entry has a `type` and `id` item.
+    - Remaining as for usual `bib` file.
+
+### Necessary items
+
+- Book
+    - `author`
+    - `title`
+    - `date`
+    - `edition`
+    - `publisher`
+    - `isbn`
+    - `doi`
+    - `url`
+- Booklet
+    - `author`
+    - `title`
+
+### Values and formats
+
+- `author`s as list
+- e-book vs. hardcover
+    Use e-book values. Often fields `date` and `isbn`.
+- `date` in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
+
+## Design
+
+- **mkdocs-material**
+    Setup from [goessl/templates](https://github.com/goessl/templates).
+- **bibliography as YAML: [`bibliography.yml`](https://github.com/goessl/bibliography/bibliography.yml)**
+    - Single source of truth.
+    - Common format that is easy to maintain and machine readable and convertible.
+- **Hook: [`hooks/build_data.py`](https://github.com/goessl/bibliography/hooks/build_data.py)**
+    - Validates the YAML on every build.
+    - Exports to JSON for Tabulator to read.
+- **[Tabulator.js](https://www.tabulator.info/)**
+    Needed for advanced formatting and filtering (especially because of authors column, which contains an array).
 
 ## Roadmap
 
+- [x] Load from single source of truth
+- [x] Filtering
 - [x] Deploy
+- [ ] Complete bibliography
+- [ ] Perfectly use material for tabulator styling
+- [ ] Improved filtering (checkbox list for authors, date and edition number ranges)
+- [ ] Subject tags
+- [ ] Author list with additional information like homepage
 - [ ] Production
 - [x] Ballin
 

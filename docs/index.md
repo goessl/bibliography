@@ -2,11 +2,60 @@
 
 Physics bibliography.
 
+## Bibliography conventions
+
+- `.bib` reference: [Overleaf/BibLaTeX](https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex)
+- Bibliography file as YAML: [`bibliography.yml`](https://github.com/goessl/bibliography)
+    - Every entry has a `type` and `id` item.
+    - Remaining as for usual `bib` file.
+
+### Necessary items
+
+- Book
+    - `author`
+    - `title`
+    - `date`
+    - `edition`
+    - `publisher`
+    - `isbn`
+    - `doi`
+    - `url`
+- Booklet
+    - `author`
+    - `title`
+
+### Values and formats
+
+- `author`s as list
+- e-book vs. hardcover
+    Use e-book values. Often fields `date` and `isbn`.
+- `date` in [ISO 8601](https://en.wikipedia.org/wiki/ISO_8601).
+
+## Design
+
+- **mkdocs-material**
+    Setup from [goessl/templates](https://github.com/goessl/templates).
+- **bibliography as YAML: [`bibliography.yml`](https://github.com/goessl/bibliography/bibliography.yml)**
+    - Single source of truth.
+    - Common format that is easy to maintain and machine readable and convertible.
+- **Hook: [`hooks/build_data.py`](https://github.com/goessl/bibliography/hooks/build_data.py)**
+    - Validates the YAML on every build.
+    - Exports to JSON for Tabulator to read.
+- **[Tabulator.js](https://www.tabulator.info/)**
+    Needed for advanced formatting and filtering (especially because of authors column, which contains an array).
+
 ## Roadmap
 
-- [ ] Sorting and filtering
-- [ ] `bibliography.yml` as single source of truth
-- [ ] Design choices
+- [x] Load from single source of truth
+- [x] Filtering
+- [x] Deploy
+- [ ] Complete bibliography
+- [ ] Perfectly use material for tabulator styling
+- [ ] Improved filtering (checkbox list for authors, date and edition number ranges)
+- [ ] Subject tags
+- [ ] Author list with additional information like homepage
+- [ ] Production
+- [x] Ballin
 
 ## License (MIT)
 
