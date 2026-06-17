@@ -48,7 +48,8 @@ hooks:
   - hooks/build_data.py
 
 extra_css:
-  - https://unpkg.com/tabulator-tables/dist/css/tabulator.min.css
+  - https://unpkg.com/tabulator-tables/dist/css/tabulator_simple.min.css
+  - stylesheets/bibliography.css
 
 extra_javascript:
   - https://unpkg.com/tabulator-tables/dist/js/tabulator.min.js
