@@ -560,10 +560,11 @@
 
 <h1 id="bibliography">Bibliography</h1>
 <p>Physics bibliography.</p>
+<p>Download: <a href="https://github.com/goessl/bibliography/blob/main/bibliography.bib"><code>bibliography.bib</code></a>.</p>
 <h2 id="bibliography-conventions">Bibliography conventions</h2>
 <ul>
 <li><code>.bib</code> reference: <a href="https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex">Overleaf/BibLaTeX</a></li>
-<li>Bibliography file as YAML: <a href="https://github.com/goessl/bibliography"><code>bibliography.yml</code></a><ul>
+<li>Bibliography file as YAML: <a href="https://github.com/goessl/bibliography/blob/main/bibliography.yml"><code>bibliography.yml</code></a><ul>
 <li>Every entry has a <code>type</code> and <code>id</code> item.</li>
 <li>Remaining as for usual <code>bib</code> file.</li>
 </ul>
@@ -572,7 +573,7 @@
 <h3 id="necessary-items">Necessary items</h3>
 <ul>
 <li>Book<ul>
-<li><code>author</code></li>
+<li><code>author</code> or <code>editor</code></li>
 <li><code>title</code></li>
 <li><code>date</code></li>
 <li><code>edition</code></li>
@@ -599,12 +600,12 @@
 <ul>
 <li><strong>mkdocs-material</strong>
     Setup from <a href="https://github.com/goessl/templates">goessl/templates</a>.</li>
-<li><strong>bibliography as YAML: <a href="https://github.com/goessl/bibliography/bibliography.yml"><code>bibliography.yml</code></a></strong><ul>
+<li><strong>bibliography as YAML: <a href="https://github.com/goessl/bibliography/blob/main/bibliography.yml"><code>bibliography.yml</code></a></strong><ul>
 <li>Single source of truth.</li>
 <li>Common format that is easy to maintain and machine readable and convertible.</li>
 </ul>
 </li>
-<li><strong>Hook: <a href="https://github.com/goessl/bibliography/hooks/build_data.py"><code>hooks/build_data.py</code></a></strong><ul>
+<li><strong>Hook: <a href="https://github.com/goessl/bibliography/blob/main/gen.py"><code>gen.py</code></a></strong><ul>
 <li>Validates the YAML on every build.</li>
 <li>Exports to JSON for Tabulator to read.</li>
 </ul>
