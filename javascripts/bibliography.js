@@ -6,7 +6,7 @@ fetch(url)
 
 //autocolumns would only scan first row
 var fields = [...new Set(data.flatMap(Object.keys))];
-var authors = [...new Set(data.flatMap(function (e) { return e.author || []; }))].sort();
+var authors = [...new Set(data.flatMap(function (e) { return e.author || e.editor || []; }))].sort();
 
 //define formatting and filtering for each column
 var columns = fields.map(function (field) {
@@ -23,6 +23,7 @@ var columns = fields.map(function (field) {
       break;
     
     case "author":
+    case "editor":
       column.formatter = function (cell) {
         var values = cell.getValue() || [];
         return (
@@ -31,7 +32,6 @@ var columns = fields.map(function (field) {
           "</ul>"
         );
       };
-      
       column.headerFilter = "list";
       column.headerFilterParams = {values: authors, clearable: true, multiselect: true};
       column.headerFilterFunc = function (headerValue, rowValue) {
@@ -68,7 +68,7 @@ var columns = fields.map(function (field) {
       column.headerFilter = "input";
       break;
   }
-
+  
   return column;
 });
 
