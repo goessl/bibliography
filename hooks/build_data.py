@@ -9,7 +9,8 @@ SOURCE = ROOT / 'bibliography.yml'
 TARGET = ROOT / 'docs' / 'bibliography.json'
 
 BOOKLET_FIELDS = {'author', 'title'}
-BOOK_FIELDS = {'author', 'title', 'date', 'edition', 'publisher', 'isbn', 'doi', 'url'}
+BOOK_FIELDS0 = {'author', 'title', 'date', 'edition', 'publisher', 'isbn', 'doi', 'url'}
+BOOK_FIELDS1 = {'editor', 'title', 'date', 'edition', 'publisher', 'isbn', 'doi', 'url'}
 
 
 def on_post_build(config, **kwargs):
@@ -37,16 +38,16 @@ def on_pre_build(config, **kwargs):
                     if not entry.keys() >= BOOKLET_FIELDS:
                         raise ValueError(f'Booklet with missing fields: {entry}')
                 case 'Book':
-                    if not entry.keys() >= BOOK_FIELDS:
+                    if not (entry.keys()>=BOOK_FIELDS0 or entry.keys()>=BOOK_FIELDS1):
                         raise ValueError(f'Book with missing fields: {entry}')
                 case _:
                     raise ValueError(f'Unrecognised entry type: {entry}')
             #check values
             for k, v in entry.items():
                 match k:
-                    case 'author':
+                    case 'author' | 'editor':
                         if not (isinstance(v, list) and all(isinstance(a, str) for a in v)):
-                            raise TypeError(f'Wrong author format: {entry}')
+                            raise TypeError(f'Wrong author/editor format: {entry}')
                     case _:
                         if not isinstance(v, (str, int, date)):
                             raise TypeError(f'Wrong format: {entry}')
