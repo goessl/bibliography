@@ -5,8 +5,13 @@ fetch(url)
   .then(function(data) {
 
 //autocolumns would only scan first row
-var fields = [...new Set(data.flatMap(Object.keys))];
-var authors = [...new Set(data.flatMap(function (e) { return e.author || e.editor || []; }))].sort();
+var allFields = new Set(data.flatMap(Object.keys));
+var priority = ['type', 'id', 'author', 'editor', 'title', 'subtitle', 'date', 'note', 'edition', 'publisher', 'isbn', 'doi', 'url'];
+var fields = [
+  ...priority.filter(function(f) { return allFields.has(f); }),
+  ...[...allFields].filter(function(f) { return !priority.includes(f); })
+];
+var persons = [...new Set(data.flatMap(function (e) { return e.author || e.editor || []; }))].sort();
 
 //define formatting and filtering for each column
 var columns = fields.map(function (field) {
@@ -33,7 +38,7 @@ var columns = fields.map(function (field) {
         );
       };
       column.headerFilter = "list";
-      column.headerFilterParams = {values: authors, clearable: true, multiselect: true};
+      column.headerFilterParams = {values: persons, clearable: true, multiselect: true};
       column.headerFilterFunc = function (headerValue, rowValue) {
         if (!headerValue || !headerValue.length) return true;
         return (rowValue || []).some(function (a) { return headerValue.includes(a); });
