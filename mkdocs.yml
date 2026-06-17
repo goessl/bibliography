@@ -45,7 +45,7 @@ markdown_extensions:
       custom_checkbox: true
 
 hooks:
-  - hooks/build_data.py
+  - gen.py
 
 extra_css:
   - https://unpkg.com/tabulator-tables/dist/css/tabulator_simple.min.css

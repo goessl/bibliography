@@ -2,6 +2,8 @@
 
 Physics bibliography.
 
+Download: [`bibliography.bib`](https://github.com/goessl/bibliography/blob/main/bibliography.bib).
+
 ## Usage
 
 **Enjoy the [webpage](https://goessl.github.io/bibliography).**
@@ -9,14 +11,14 @@ Physics bibliography.
 ## Bibliography conventions
 
 - `.bib` reference: [Overleaf/BibLaTeX](https://www.overleaf.com/learn/latex/Bibliography_management_with_biblatex)
-- Bibliography file as YAML: [`bibliography.yml`](https://github.com/goessl/bibliography)
+- Bibliography file as YAML: [`bibliography.yml`](https://github.com/goessl/bibliography/blob/main/bibliography.yml)
     - Every entry has a `type` and `id` item.
     - Remaining as for usual `bib` file.
 
 ### Necessary items
 
 - Book
-    - `author`
+    - `author` or `editor`
     - `title`
     - `date`
     - `edition`
@@ -39,10 +41,10 @@ Physics bibliography.
 
 - **mkdocs-material**
     Setup from [goessl/templates](https://github.com/goessl/templates).
-- **bibliography as YAML: [`bibliography.yml`](https://github.com/goessl/bibliography/bibliography.yml)**
+- **bibliography as YAML: [`bibliography.yml`](https://github.com/goessl/bibliography/blob/main/bibliography.yml)**
     - Single source of truth.
     - Common format that is easy to maintain and machine readable and convertible.
-- **Hook: [`hooks/build_data.py`](https://github.com/goessl/bibliography/hooks/build_data.py)**
+- **Hook: [`gen.py`](https://github.com/goessl/bibliography/blob/main/gen.py)**
     - Validates the YAML on every build.
     - Exports to JSON for Tabulator to read.
 - **[Tabulator.js](https://www.tabulator.info/)**

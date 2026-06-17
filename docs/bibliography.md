@@ -7,4 +7,6 @@ extra:
 
 # Bibliography
 
+Download: [`bibliography.bib`](https://github.com/goessl/bibliography/blob/main/bibliography.bib).
+
 <div id="bibliography-table"></div>
