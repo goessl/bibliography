@@ -44,10 +44,10 @@ def on_pre_build(config, **kwargs):
         if not ('type' in entry and 'id' in entry):
             raise ValueError(f'Entry without type or id: {entry}')
         match entry['type']:
-            case 'Booklet':
+            case 'booklet':
                 if not entry.keys() >= BOOKLET_FIELDS:
                     raise ValueError(f'Booklet with missing fields: {entry}')
-            case 'Book':
+            case 'book':
                 if not (entry.keys() >= BOOK_FIELDS0 or entry.keys() >= BOOK_FIELDS1):
                     raise ValueError(f'Book with missing fields: {entry}')
             case _:

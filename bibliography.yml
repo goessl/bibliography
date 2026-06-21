@@ -1,29 +1,100 @@
 #lecture notes
 #Maas
-- type: Booklet
-  id: la
+- type: booklet
+  id: maas-emm-25WS
+  author:
+  - Maas, Axel
+  title: Introduction to Mathematics
+  subtitle: Lecture in WS 2025/26 at the KFU Graz
+  url: https://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/maas_axel/im.pdf
+
+- type: booklet
+  id: maas-la-25WS
   author:
   - Maas, Axel
   title: Linear Algebra
   subtitle: Lecture in WS 2025/26 at the KFU Graz
   url: https://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/maas_axel/la.pdf
 
+- type: booklet
+  id: maas-qm-22SS
+  author:
+  - Maas, Axel
+  title: Quantum Mechanics
+  subtitle: Lecture in SS 2022 at the KFU Graz
+  url: https://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/maas_axel/qm2022.pdf
+
+- type: booklet
+  id: maas-tm-16WS
+  author:
+  - Maas, Axel
+  title: Theoretical Mechanics
+  subtitle: Lecture in WS 2016/17 at the KFU Graz
+  url: https://static.uni-graz.at/fileadmin/_Persoenliche_Webseite/maas_axel/tm2016-17.pdf
+
 
 #Behrndt, Holzmann, Schlosser
-- type: Booklet
-  id: funki
+- type: booklet
+  id: behrndt-dgl-2025
+  author:
+  - Holzmann, Markus
+  title: Gewöhnliche und partielle Differentialgleichungen
+  subtitle: Skriptum Sommersemester 2025
+
+- type: booklet
+  id: behrndt-la-2022
+  author:
+  - Holzmann, Markus
+  title: Lineare Algebra
+  subtitle: Skriptum Wintersemester 2022/23
+
+- type: booklet
+  id: behrndt-difint-2025
+  author:
+  - Schlosser, Peter
+  title: Differential- und Integralrechnung für PhysikerInnen
+  subtitle: Skriptum Wintersemester 2025/26
+
+- type: booklet
+  id: behrndt-vek-2024
+  author:
+  - Holzmann, Markus
+  title: Vektoranalysis und Funktionentheorie
+  subtitle: Vorlesungsskriptum Bachelorstudium Physik Sommersemester 2024
+
+- type: booklet
+  id: behrndt-funki-2024
   author:
   - Behrndt, Jussi
   - Holzmann, Markus
   - Schlosser, Peter
-  title: Funktionalanalysis und partielle Differentialgleichungen
-  subtitle: Skriptum
-  note: Wintersemester 2020/21
+  title: Funktionalanalysis
+  subtitle: Skriptum Wintersemester 2024/25
+
+
+#Evertz
+- type: booklet
+  id: evertz-qm-2023
+  author:
+  - Evertz, Hans Gerd
+  - von der Linden, Wolfgang
+  title: Quantenmechanik
+  subtitle: Sommersemester 2017 mit Anhang A.13 (2019) und Kap. 9 (2023)
+  url: https://itp.tugraz.at/~evertz/QM/qm.html
+
+- type: booklet
+  id: vdlinden-wsd-2002
+  author:
+  - von der Linden, Wolfgang
+  - Prüll Alexander
+  title: Wahrscheinlichkeitstheorie, Statistik und Datenanalyse
+  date: 2002-12-10
+  url: https://itp.tugraz.at/LV/wvl/Statistik/A_WS_pdf.pdf
 
 
 #physics
 #Demtröder
-- type: Book
+- type: book
   id: demtroeder-1-2021
   author:
   - Demtröder, Wolfgang
@@ -36,7 +107,7 @@
   doi: 10.1007/978-3-662-62728-0
   url: https://link.springer.com/book/10.1007/978-3-662-62728-0
 
-- type: Book
+- type: book
   id: demtroeder-2-2026
   author:
   - Demtröder, Wolfgang
@@ -49,7 +120,7 @@
   doi: 10.1007/978-3-662-69151-9
   url: https://link.springer.com/book/10.1007/978-3-662-69151-9
 
-- type: Book
+- type: book
   id: demtroeder-3-2016
   author:
   - Demtröder, Wolfgang
@@ -62,7 +133,7 @@
   doi: 10.1007/978-3-662-49094-5
   url: https://link.springer.com/book/10.1007/978-3-662-49094-5
 
-- type: Book
+- type: book
   id: demtroeder-4-2017
   author:
   - Demtröder, Wolfgang
@@ -77,7 +148,7 @@
 
 
 #Nolting
-- type: Book
+- type: book
   id: nolting-1-2018
   author:
   - Nolting, Wolfgang
@@ -90,7 +161,7 @@
   doi: 10.1007/978-3-662-57584-0
   url: https://link.springer.com/book/10.1007/978-3-662-57584-0
 
-- type: Book
+- type: book
   id: nolting-2-2014
   author:
   - Nolting, Wolfgang
@@ -103,7 +174,7 @@
   doi: 10.1007/978-3-642-41980-5
   url: https://link.springer.com/book/10.1007/978-3-642-41980-5
 
-- type: Book
+- type: book
   id: nolting-3-2013
   author:
   - Nolting, Wolfgang
@@ -116,7 +187,7 @@
   doi: 10.1007/978-3-642-37905-5
   url: https://link.springer.com/book/10.1007/978-3-642-37905-5
 
-- type: Book
+- type: book
   id: nolting-41-2016
   author:
   - Nolting, Wolfgang
@@ -129,7 +200,7 @@
   doi: 10.1007/978-3-662-49031-0
   url: https://link.springer.com/book/10.1007/978-3-662-49031-0
 
-- type: Book
+- type: book
   id: nolting-42-2016
   author:
   - Nolting, Wolfgang
@@ -142,7 +213,7 @@
   doi: 10.1007/978-3-662-49033-4
   url: https://link.springer.com/book/10.1007/978-3-662-49033-4
 
-- type: Book
+- type: book
   id: nolting-51-2013
   author:
   - Nolting, Wolfgang
@@ -155,7 +226,7 @@
   doi: 10.1007/978-3-662-07560-9
   url: https://link.springer.com/book/10.1007/978-3-662-07560-9
 
-- type: Book
+- type: book
   id: nolting-52-2014
   author:
   - Nolting, Wolfgang
@@ -168,7 +239,7 @@
   doi: 10.1007/978-3-662-44230-2
   url: https://link.springer.com/book/10.1007/978-3-662-44230-2
 
-- type: Book
+- type: book
   id: nolting-6-2013
   author:
   - Nolting, Wolfgang
@@ -181,7 +252,7 @@
   doi: 10.1007/978-3-642-25393-5
   url: https://link.springer.com/book/10.1007/978-3-642-25393-5
 
-- type: Book
+- type: book
   id: nolting-7-2014
   author:
   - Nolting, Wolfgang
@@ -196,7 +267,7 @@
 
 
 #Fließbach
-- type: Book
+- type: book
   id: fliessbach-1-2020
   author:
   - Fließbach, Torsten
@@ -209,7 +280,7 @@
   doi: 10.1007/978-3-662-61603-1
   url: https://link.springer.com/book/10.1007/978-3-662-61603-1
 
-- type: Book
+- type: book
   id: fliessbach-2-2022
   author:
   - Fließbach, Torsten
@@ -222,7 +293,7 @@
   doi: 10.1007/978-3-662-64889-6
   url: https://link.springer.com/book/10.1007/978-3-662-64889-6
 
-- type: Book
+- type: book
   id: fliessbach-3-2018
   author:
   - Fließbach, Torsten
@@ -235,7 +306,7 @@
   doi: 10.1007/978-3-662-58031-8
   url: https://link.springer.com/book/10.1007/978-3-662-58031-8
 
-- type: Book
+- type: book
   id: fliessbach-4-2018
   author:
   - Fließbach, Torsten
@@ -248,7 +319,7 @@
   doi: 10.1007/978-3-662-58033-2
   url: https://link.springer.com/book/10.1007/978-3-662-58033-2
 
-- type: Book
+- type: book
   id: fliessbach-relmas-2018
   author:
   - Fließbach, Torsten
@@ -260,7 +331,7 @@
   doi: 10.1007/978-3-662-58084-4
   url: https://link.springer.com/book/10.1007/978-3-662-58084-4
 
-- type: Book
+- type: book
   id: fliessbach-algrel-2016
   author:
   - Fließbach, Torsten
@@ -273,8 +344,8 @@
   url: https://link.springer.com/book/10.1007/978-3-662-53106-8
 
 
-- type: Book
-  id: eichler-2016
+- type: book
+  id: eichler-phyprak-2016
   author:
   - Eichler, Hans Joachim
   - Kronfeldt, Heinz-Detlef
@@ -287,8 +358,8 @@
   doi: 10.1007/978-3-662-49023-5
   url: https://link.springer.com/book/10.1007/978-3-662-49023-5
 
-- type: Book
-  id: povh-2014
+- type: book
+  id: povh-aphy-2014
   author:
   - Povh, Bogdan
   - Soergel, Elisabeth
@@ -303,8 +374,8 @@
 
 
 #math
-- type: Book
-  id: arens
+- type: book
+  id: arens-mat-2022
   author:
   - Arens, Tilo
   - Hettlich, Frank
@@ -320,8 +391,8 @@
   doi: 10.1007/978-3-662-64389-1
   url: https://link.springer.com/book/10.1007/978-3-662-64389-1
 
-- type: Book
-  id: lang-2016
+- type: book
+  id: lang-matmet-2016
   author:
   - Lang, Christian Bernd
   - Pucker, Norbert
@@ -333,11 +404,62 @@
   doi: 10.1007/978-3-662-49313-7
   url: https://link.springer.com/book/10.1007/978-3-662-49313-7
 
+#Jänich
+- type: book
+  id: jaenich-mat1-2006
+  author:
+  - Jänich, Klaus
+  title: Mathematik 1
+  subtitle: Geschrieben für Physiker
+  date: 2006-03-30
+  edition: 2
+  publisher: Springer Spektrum Berlin, Heidelberg
+  isbn: 978-3-540-26652-5
+  doi: 10.1007/b137863
+  url: https://link.springer.com/book/10.1007/b137863
+
+- type: book
+  id: jaenich-mat2-2011
+  author:
+  - Klaus Jänich
+  title: Mathematik 2
+  subtitle: Geschrieben für Physiker
+  date: 2011-01-15
+  edition: 2
+  publisher: Springer Berlin, Heidelberg
+  isbn: 978-3-642-16150-6
+  doi: 10.1007/978-3-642-16150-6
+  url: https://link.springer.com/book/10.1007/978-3-642-16150-6
+
+- type: book
+  id: jaenich-la-2007
+  author:
+  - Klaus Jänich
+  title: Lineare Algebra
+  date: 2007-12-05
+  edition: 11
+  publisher: Springer Berlin, Heidelberg
+  isbn: 978-3-540-75502-9
+  doi: 10.1007/978-3-540-75502-9
+  url: https://link.springer.com/book/10.1007/978-3-540-75502-9
+
+- type: book
+  id: jaenich-vek-2006
+  author:
+  - Klaus Jänich
+  title: Vektoranalysis
+  date: 2006-03-30
+  edition: 5
+  publisher: Springer Berlin, Heidelberg
+  isbn: 978-3-540-27338-7
+  doi: 10.1007/b138936
+  url: https://link.springer.com/book/10.1007/b138936
+
 
 #engineering
 #Böge
-- type: Book
-  id: boege-2021
+- type: book
+  id: boege-handb-2021
   editor:
   - Böge, Alfred
   - Böge, Wolfgang
@@ -349,3 +471,17 @@
   isbn: 978-3-658-30273-3
   doi: 10.1007/978-3-658-30273-3
   url: https://link.springer.com/book/10.1007/978-3-658-30273-3
+
+- type: book
+  id: boege-tabform-2015
+  editor:
+  - Böge, Alfred
+  - Böge, Wolfgang
+  title: Formeln und Tabellen Maschinenbau},
+  subtitle: Für Studium und Praxis},
+  date: 2015-12-04
+  edition: 4
+  publisher: Springer Fachmedien Wiesbaden
+  isbn: 978-3-658-09817-9
+  doi: 10.1007/978-3-658-09817-9
+  url: https://link.springer.com/book/10.1007/978-3-658-09817-9
