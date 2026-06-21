@@ -11,7 +11,8 @@ var fields = [
   ...priority.filter(function(f) { return allFields.has(f); }),
   ...[...allFields].filter(function(f) { return !priority.includes(f); })
 ];
-var persons = [...new Set(data.flatMap(function (e) { return e.author || e.editor || []; }))].sort();
+var authors = [...new Set(data.flatMap(function(e) { return e.author || []; }))].sort();
+var editors = [...new Set(data.flatMap(function(e) { return e.editor || []; }))].sort();
 
 //define formatting and filtering for each column
 var columns = fields.map(function (field) {
@@ -29,26 +30,37 @@ var columns = fields.map(function (field) {
     
     case "author":
     case "editor":
-      column.formatter = function (cell) {
-        var values = cell.getValue() || [];
-        return (
-          "<ul>" +
-          values.map(function (a) { return "<li>"+a+"</li>"; }).join("") +
-          "</ul>"
-        );
+      column.formatter = function(cell) {
+        var ul = document.createElement('ul');
+        (cell.getValue() || []).forEach(function(a) {
+          var li = document.createElement('li');
+          li.textContent = a;
+          ul.appendChild(li);
+        });
+        return ul;
       };
       column.headerFilter = "list";
-      column.headerFilterParams = {values: persons, clearable: true, multiselect: true};
+      column.headerFilterParams = {values: field==='author'?authors:editors, clearable: true, multiselect: true};
       column.headerFilterFunc = function (headerValue, rowValue) {
-        if (!headerValue || !headerValue.length) return true;
+        if(!headerValue || !headerValue.length) {
+            return true;
+        }
         return (rowValue || []).some(function (a) { return headerValue.includes(a); });
       };
       break;
     
     case "url":
-      column.formatter = "link";
-      column.formatterParams = {label: "link",
-                                target: "_blank" };
+      column.formatter = function(cell) {
+        var val = cell.getValue();
+        if(!val) {
+            return '';
+        }
+        var a = document.createElement('a');
+        a.href = val;
+        a.textContent = 'link';
+        a.target = '_blank';
+        return a;
+      };
       break;
     
     case "publisher":
@@ -60,11 +72,16 @@ var columns = fields.map(function (field) {
       break;
     
     case "doi":
-      column.formatter = "link";
-      column.formatterParams = {
-        label: function (cell) { return cell.getValue(); },
-        url: function (cell) { return "https://doi.org/" + cell.getValue(); },
-        target: "_blank"
+      column.formatter = function(cell) {
+        var val = cell.getValue();
+        if(!val) {
+            return '';
+        }
+        var a = document.createElement('a');
+        a.href = 'https://doi.org/' + val;
+        a.textContent = val;
+        a.target = '_blank';
+        return a;
       };
       column.headerFilter = "input";
       break;
